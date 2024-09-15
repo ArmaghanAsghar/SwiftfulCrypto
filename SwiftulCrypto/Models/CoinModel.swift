@@ -67,12 +67,12 @@ struct CoinModel: Identifiable, Codable {
     // A computed value to capture the market value
     // of all our holdings
     var currentHoldingsValue: Double {
-        return currentHoldings ?? 0 * currentPrice
+        return (currentHoldings ?? 0) * currentPrice
     }
     
-    // The rank of the coin based on market cap. 
+    // The rank of the coin based on market cap.
     var rank: Int {
-        return Int(marketCap ?? 0)
+        return Int(marketCapRank ?? 0)
     }
     
 }

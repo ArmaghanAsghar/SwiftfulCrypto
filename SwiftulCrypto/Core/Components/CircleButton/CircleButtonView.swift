@@ -29,9 +29,11 @@ struct CircleButtonView: View {
 }
 
 #Preview {
-    Group {
         CircleButtonView(iconName: "info")
             .previewLayout(.sizeThatFits)
-    }
-   
+}
+
+#Preview {
+    CircleButtonView(iconName: "info")
+        .preferredColorScheme(.dark)
 }

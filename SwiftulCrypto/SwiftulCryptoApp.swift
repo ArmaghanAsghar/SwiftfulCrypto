@@ -9,12 +9,17 @@ import SwiftUI
 
 @main
 struct SwiftulCryptoApp: App {
+    
+    @StateObject private var viewModel = HomeViewModel(allCoins: [], portfolioCoins: [])
+    
+
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 HomeView()
                     .navigationTitle("Hey")
             }
+            .environmentObject(viewModel)
         }
     }
 }

@@ -17,6 +17,10 @@
 		EFD6CD112C9652D100D42F56 /* CircleButtonAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD102C9652D100D42F56 /* CircleButtonAnimatedView.swift */; };
 		EFD6CD142C965AFA00D42F56 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD132C965AFA00D42F56 /* CoinModel.swift */; };
 		EFD6CD162C965DA100D42F56 /* api_key.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD152C965DA100D42F56 /* api_key.swift */; };
+		EFD6CD182C967A9600D42F56 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD172C967A9600D42F56 /* CoinRowView.swift */; };
+		EFD6CD1A2C967E7F00D42F56 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD192C967E7F00D42F56 /* Double.swift */; };
+		EFD6CD1C2C967FBD00D42F56 /* GlobalSampeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD1B2C967FBD00D42F56 /* GlobalSampeModel.swift */; };
+		EFD6CD1E2C96A1D100D42F56 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD1D2C96A1D100D42F56 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		EFD6CD102C9652D100D42F56 /* CircleButtonAnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimatedView.swift; sourceTree = "<group>"; };
 		EFD6CD132C965AFA00D42F56 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		EFD6CD152C965DA100D42F56 /* api_key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api_key.swift; sourceTree = "<group>"; };
+		EFD6CD172C967A9600D42F56 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		EFD6CD192C967E7F00D42F56 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		EFD6CD1B2C967FBD00D42F56 /* GlobalSampeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSampeModel.swift; sourceTree = "<group>"; };
+		EFD6CD1D2C96A1D100D42F56 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				EFD6CD042C963DFC00D42F56 /* Color.swift */,
+				EFD6CD192C967E7F00D42F56 /* Double.swift */,
+				EFD6CD1B2C967FBD00D42F56 /* GlobalSampeModel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -111,6 +121,7 @@
 		EFD6CD082C964B7500D42F56 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EFD6CD1D2C96A1D100D42F56 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -119,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD6CD0A2C964B9100D42F56 /* HomeView.swift */,
+				EFD6CD172C967A9600D42F56 /* CoinRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,13 +231,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD6CD182C967A9600D42F56 /* CoinRowView.swift in Sources */,
 				EFD6CCF82C96378600D42F56 /* ContentView.swift in Sources */,
 				EFD6CD0B2C964B9100D42F56 /* HomeView.swift in Sources */,
 				EFD6CD162C965DA100D42F56 /* api_key.swift in Sources */,
 				EFD6CCF62C96378600D42F56 /* SwiftulCryptoApp.swift in Sources */,
 				EFD6CD112C9652D100D42F56 /* CircleButtonAnimatedView.swift in Sources */,
+				EFD6CD1C2C967FBD00D42F56 /* GlobalSampeModel.swift in Sources */,
+				EFD6CD1E2C96A1D100D42F56 /* HomeViewModel.swift in Sources */,
 				EFD6CD0F2C964D4F00D42F56 /* CircleButtonView.swift in Sources */,
 				EFD6CD052C963DFC00D42F56 /* Color.swift in Sources */,
+				EFD6CD1A2C967E7F00D42F56 /* Double.swift in Sources */,
 				EFD6CD142C965AFA00D42F56 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
