@@ -27,32 +27,16 @@ class CoinDataService {
         }
         
         /**
-         (1) Assign the main thread to process this URL Request
+         (1) Assign to the background thread to process this URL Request, and recieve on main thead. 
          (2) Check to see if the HTTP response is valid
          (3) Decode the HTTP response into a defined structure model
          (4) Check if there was an error parsing/decoding the values
          (5) When sucessfully received everything then assign to the array. 
          */
-        coinSubscription = URLSession.shared.dataTaskPublisher(for: url)
-            .subscribe(on: DispatchQueue.global(qos: .default))
-            .tryMap { (output) -> Data in
-                guard let response = output.response as? HTTPURLResponse,
-                      response.statusCode >= 200 && response.statusCode < 300 else {
-                    throw URLError(.badServerResponse)
-                }
-                return output.data
-            }
-            .receive(on: DispatchQueue.main)
+        coinSubscription = NetworkingManager.download(url: url)
             .decode(type: [CoinModel].self, decoder: JSONDecoder())
-            .sink { (completion) in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-                
-            } receiveValue: { [weak self] (returnedCoins) in
+           
+            .sink(receiveCompletion:  NetworkingManager.handleCompletion) { [weak self] (returnedCoins) in
                 self?.allCoins = returnedCoins
                 self?.coinSubscription?.cancel()
             }

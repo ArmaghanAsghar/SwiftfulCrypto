@@ -22,6 +22,7 @@
 		EFD6CD1C2C967FBD00D42F56 /* GlobalSampeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD1B2C967FBD00D42F56 /* GlobalSampeModel.swift */; };
 		EFD6CD1E2C96A1D100D42F56 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD1D2C96A1D100D42F56 /* HomeViewModel.swift */; };
 		EFD6CD212C9750C600D42F56 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD202C9750C600D42F56 /* CoinDataService.swift */; };
+		EFD6CD242C9765B200D42F56 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CD232C9765B200D42F56 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		EFD6CD1B2C967FBD00D42F56 /* GlobalSampeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSampeModel.swift; sourceTree = "<group>"; };
 		EFD6CD1D2C96A1D100D42F56 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EFD6CD202C9750C600D42F56 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		EFD6CD232C9765B200D42F56 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		EFD6CCF42C96378600D42F56 /* SwiftulCrypto */ = {
 			isa = PBXGroup;
 			children = (
+				EFD6CD222C97659E00D42F56 /* Utilities */,
 				EFD6CD032C963DEB00D42F56 /* Extensions */,
 				EFD6CD1F2C9750B100D42F56 /* Services */,
 				EFD6CD062C964B5600D42F56 /* Core */,
@@ -172,6 +175,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EFD6CD222C97659E00D42F56 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EFD6CD232C9765B200D42F56 /* NetworkingManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +266,7 @@
 				EFD6CD052C963DFC00D42F56 /* Color.swift in Sources */,
 				EFD6CD1A2C967E7F00D42F56 /* Double.swift in Sources */,
 				EFD6CD142C965AFA00D42F56 /* CoinModel.swift in Sources */,
+				EFD6CD242C9765B200D42F56 /* NetworkingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
