@@ -123,13 +123,13 @@ extension HomeView {
     NavigationStack {
         HomeView()
     }
-    .environmentObject(HomeViewModel(allCoins: [], portfolioCoins: []))
+    .environmentObject(HomeViewModel())
 }
 
 #Preview {
     NavigationStack {
         HomeView()
             .preferredColorScheme(.dark)
-            .environmentObject(HomeViewModel(allCoins: [], portfolioCoins: []))
+            .environmentObject(HomeViewModel())
     }
 }

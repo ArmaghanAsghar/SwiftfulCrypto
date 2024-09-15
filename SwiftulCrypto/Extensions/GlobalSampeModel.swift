@@ -15,7 +15,7 @@ struct GlobalSampleModel {
     
     private init() {}
     
-    let homeViewModel = HomeViewModel(allCoins: [], portfolioCoins: [])
+    let homeViewModel = HomeViewModel()
     
     let coinModelSample = CoinModel(
         id: "bitcoin",
