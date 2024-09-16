@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// A reusable class for downloading the data from the internet. 
 class NetworkingManager {
     
     /// Erros specific to my application

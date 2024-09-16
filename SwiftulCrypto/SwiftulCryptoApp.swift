@@ -17,7 +17,6 @@ struct SwiftulCryptoApp: App {
         WindowGroup {
             NavigationStack {
                 HomeView()
-                    .navigationTitle("Hey")
             }
             .environmentObject(viewModel)
         }

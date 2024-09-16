@@ -18,6 +18,7 @@ struct HomeView: View {
             Color.theme.background
                 .ignoresSafeArea()
             VStack {
+                
                 HomeViewHeader
                 columnTitles
                 
