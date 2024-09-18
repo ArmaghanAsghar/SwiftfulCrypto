@@ -28,11 +28,29 @@ class HomeViewModel: ObservableObject {
         /*
          (1) Attaching any subscribers to the publisher
          **/
-        coinServices.$allCoins
+        $searchBarText
+            .combineLatest(coinServices.$allCoins)
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main) // This is new!
+            .map(filteredCoins)
             .sink { [weak self] (returnedCoins) in
                 self?.allCoins = returnedCoins
             }
             .store(in: &cancellables)
+    }
+    
+    
+    private func filteredCoins(text: String, startingCoins: [CoinModel]) -> [CoinModel] {
+        guard !text.isEmpty else {
+            return startingCoins
+        }
+        
+        let lowercasedText = text.lowercased()
+        
+        return startingCoins.filter { (coin) -> Bool in
+            return coin.name.lowercased().contains(lowercasedText) ||
+            coin.symbol.lowercased().contains(lowercasedText) ||
+            coin.id.lowercased().contains(lowercasedText)
+       }
     }
                               
     
