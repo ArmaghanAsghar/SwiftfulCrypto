@@ -9,5 +9,5 @@ import Foundation
 
 
 struct CoinGeckoApi {
-    static let key: String = "CG-3sbpHq97QiGMKyDdzQD5mzg3"
+    static let key: String = "Add Key here"
 }
